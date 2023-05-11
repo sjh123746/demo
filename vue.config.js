@@ -16,13 +16,10 @@ module.exports = {
   module: {
     rules: [
       {
-        // 告诉浏览器匹配什么文件
-        test: /\.css$/,
-        // 告知webpack使用哪一个loader, 前提是安装好
-        ues: [
-          { loader: "css-loader" }
-        ]
-      }
+        test: /\.less$/,
+        loader: "style-loader!css-loader!less-loader"
+    }
+
     ]
 
   }
